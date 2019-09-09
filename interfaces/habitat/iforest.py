@@ -1,4 +1,4 @@
-from .terrestrial import ITerrestrial
+from .iterrestrial import ITerrestrial
 
 class IForest(ITerrestrial):
     def __init__(self):

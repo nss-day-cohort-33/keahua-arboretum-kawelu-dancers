@@ -1,4 +1,4 @@
-from .aquatic import IAquatic
+from .iaquatic import IAquatic
 
 class IStagnant(IAquatic):
     def __init__(self):

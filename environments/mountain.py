@@ -1,7 +1,7 @@
-from interfaces import ITerrestrial
-from interfaces import Identifiable
-from interfaces import IContainsAnimals
-from interfaces import IContainsPlants
+from interfaces.habitat import ITerrestrial
+from interfaces.identifiable import Identifiable
+from interfaces.habitat import IContainsAnimals
+from interfaces.habitat import IContainsPlants
 
 
 class Mountain(IContainsAnimals, IContainsPlants, Identifiable):

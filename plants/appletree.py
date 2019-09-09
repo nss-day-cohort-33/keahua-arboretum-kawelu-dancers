@@ -1,4 +1,4 @@
-from plant import Plant
+from .plant import Plant
 from interfaces.habitat import IMountain
 from interfaces import Identifiable
 
@@ -8,8 +8,7 @@ class Apple_Tree(Plant, IMountain, Identifiable):
         Plant.__init__(self, "Mountain Apple Tree")
         IMountain.__init__(self)
         Identifiable.__init__(self)
-        
 
-    
 
-    
+
+

@@ -1,4 +1,4 @@
-from .terrestrial import ITerrestrial
+from .iterrestrial import ITerrestrial
 
 class IMountain(ITerrestrial):
     def __init__(self):
