@@ -1,4 +1,4 @@
-from plant import Plant
+from .plant import Plant
 from interfaces.habitat import IGrassland
 from interfaces.habitat import IStagnant
 from interfaces.identifiable import Identifiable

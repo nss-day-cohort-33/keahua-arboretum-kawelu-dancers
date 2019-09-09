@@ -1,6 +1,6 @@
 from animals import Animal
 from interfaces.habitat import IForest
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Gecko(Animal, IForest, Identifiable):
 

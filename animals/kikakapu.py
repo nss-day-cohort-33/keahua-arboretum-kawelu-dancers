@@ -1,14 +1,14 @@
 from animals import Animal
-from interfaces.habitat import IRiver
-from interfaces.habitat import ISwamp
-from interfaces import Identifiable
+from interfaces.habitat import IFreshwater
+from interfaces.habitat import IStagnant
+from interfaces.identifiable import Identifiable
 
-class Kikakapu(Animal, IRiver, ISwamp, Identifiable):
+class Kikakapu(Animal, IFreshwater, IStagnant, Identifiable):
 
     def __init__(self, age):
         Animal.__init__(self, "Kikakapu", age)
-        IRiver.__init__(self)
-        ISwamp.__init__(self)
+        IFreshwater.__init__(self)
+        IStagnant.__init__(self)
         Identifiable.__init__(self)
         self.__prey = { "Algae", "Coral Polyps", "Worms", "Shrimp"}
 

@@ -1,7 +1,7 @@
 from animals import Animal
 from interfaces.habitat import IForest
 from interfaces.habitat import IMountain
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Opeapea(Animal, IForest, IMountain, Identifiable):
 

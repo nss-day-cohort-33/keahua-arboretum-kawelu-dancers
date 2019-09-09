@@ -1,6 +1,6 @@
 from animals import Animal
 from interfaces.habitat import ISaltwater
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Ulae(Animal, ISaltwater, Identifiable):
 

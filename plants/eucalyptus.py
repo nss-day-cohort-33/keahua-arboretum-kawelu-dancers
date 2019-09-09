@@ -1,4 +1,4 @@
-from plant import Plant
+from .plant import Plant
 from interfaces.habitat import IForest
 from interfaces import Identifiable
 
