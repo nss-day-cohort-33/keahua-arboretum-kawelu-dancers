@@ -4,7 +4,7 @@ from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 
 
-class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
+class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
       IContainsAnimals.__init__(self)
@@ -13,14 +13,14 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic == True and animal.stagnant == True:
+            if animal.aquatic == True and animal.salty == True:
                 self.animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a swamp")
+            raise AttributeError("Cannot add terrestrial, or non-coastline animals to a coastline")
 
     def add_plant(self, plant):
         try:
-            if plant.aquatic == True and plant.stagnant == True:
+            if plant.aquatic == True and plant.salty == True:
                 self.plants.append(plant)
         except AttributeError:
-            raise AttributeError("Can only add plants that require stagnant water to a swamp")
+            raise AttributeError("Cannot add terrestrial, or non-coastline plants to a coastline")
