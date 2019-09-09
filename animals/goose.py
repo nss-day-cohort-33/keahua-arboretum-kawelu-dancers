@@ -1,6 +1,6 @@
 from animals import Animal
 from interfaces.habitat import IGrassland
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Goose(Animal, IGrassland, Identifiable):
 

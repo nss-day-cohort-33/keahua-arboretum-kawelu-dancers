@@ -15,10 +15,28 @@ def release_animal(arboretum):
     choice = input("Choose animal to release > ")
 
     if choice == "1":
-        animal = RiverDolphin()
+        animal = Gecko()
 
     if choice == "2":
-        pass
+        animal = RiverDolphin()
+
+    if choice == "3":
+        animal = Goose()
+
+    if choice == "4":
+        animal = Kikakapu()
+
+    if choice == "5":
+        animal = Pueo()
+
+    if choice == "6":
+        animal = Ulae()
+
+    if choice == "7":
+        animal = Opeapea()
+
+    if choice == "8":
+        animal = Spider()
 
 
     for index, river in enumerate(arboretum.rivers):

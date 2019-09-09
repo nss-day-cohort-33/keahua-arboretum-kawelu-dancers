@@ -1,7 +1,7 @@
 from animals import Animal
 from interfaces.habitat import IRiver
 from interfaces.habitat import ISwamp
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Kikakapu(Animal, IRiver, ISwamp, Identifiable):
 

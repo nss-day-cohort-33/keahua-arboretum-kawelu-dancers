@@ -1,7 +1,7 @@
-from interfaces import IAquatic
-from interfaces import Identifiable
-from interfaces import IContainsAnimals
-from interfaces import IContainsPlants
+from interfaces.habitat import IAquatic
+from interfaces.identifiable import Identifiable
+from interfaces.habitat import IContainsAnimals
+from interfaces.habitat import IContainsPlants
 
 
 class Swamp(IContainsAnimals, IContainsPlants, Identifiable):

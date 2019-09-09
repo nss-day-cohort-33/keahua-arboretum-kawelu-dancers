@@ -1,6 +1,6 @@
 from animals import Animal
 from interfaces.habitat import IStagnant
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Spider(Animal, IStagnant, Identifiable):
 
