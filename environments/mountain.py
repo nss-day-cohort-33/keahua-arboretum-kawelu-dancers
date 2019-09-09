@@ -1,10 +1,10 @@
-from interfaces import IAquatic
+from interfaces import ITerrestrial
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 
 
-class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
+class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
       IContainsAnimals.__init__(self)
@@ -13,14 +13,14 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic == True and animal.stagnant == True:
+            if animal.terrestrial == True and animal.mountain_bound == True:
                 self.animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a swamp")
+            raise AttributeError("Cannot add aquatic, or non-mountain animals to a mountain")
 
     def add_plant(self, plant):
         try:
-            if plant.aquatic == True and plant.stagnant == True:
+            if plant.terrestrial == True and plant.mountain_bound == True:
                 self.plants.append(plant)
         except AttributeError:
-            raise AttributeError("Can only add plants that require stagnant water to a swamp")
+            raise AttributeError("Cannot add aquatic, or non-mountain plants to a mountain")
