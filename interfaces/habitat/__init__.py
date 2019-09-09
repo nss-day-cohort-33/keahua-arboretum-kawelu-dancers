@@ -2,6 +2,7 @@ from .iterrestrial import ITerrestrial
 from .ifreshwater import IFreshwater
 from .iaquatic import IAquatic
 from .iforest import IForest
+from .istagnant import IStagnant
 from .igrassland import IGrassland
 from .imountain import IMountain
 from .isaltwater import ISaltwater
