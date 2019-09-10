@@ -52,22 +52,22 @@ def release_animal(arboretum):
     try:
         if animal.fresh:
             habitat_list.extend(arboretum.rivers)
-    except AttributeError: 
+    except AttributeError:
         pass
 
     try:
         if animal.stagnant:
             habitat_list.extend(arboretum.swamps)
-    except AttributeError: 
+    except AttributeError:
         pass
-    
+
     try:
         if animal.salty:
             habitat_list.extend(arboretum.coastlines)
-    except AttributeError: 
+    except AttributeError:
         pass
 
-    try:    
+    try:
         if animal.mountain_bound:
             habitat_list.extend(arboretum.mountains)
     except AttributeError:
@@ -86,14 +86,8 @@ def release_animal(arboretum):
         pass
 
 
-
-    # for habitat_list:
-
     for index, habitats in enumerate(habitat_list):
         print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
-
-
-
 
 
     print("Release the animal into which biome?")
@@ -105,10 +99,6 @@ def release_animal(arboretum):
             print("**** That Biome is not large enough **** \n **** Please choose another one ****")
             for index, habitats in enumerate(habitat_list):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
-
-
-
-
 
                 print("Release the animal into which biome?")
                 choice = input("> ")
