@@ -10,18 +10,7 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
       IContainsAnimals.__init__(self)
       IContainsPlants.__init__(self)
       Identifiable.__init__(self)
-      self.type = "Swamp"
+      self.type = "swamps"
+      self.max_animals = 8
+      self.max_plants = 12
 
-    def add_animal(self, animal):
-        try:
-            if animal.aquatic == True and animal.stagnant == True:
-                self.animals.append(animal)
-        except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a swamp")
-
-    def add_plant(self, plant):
-        try:
-            if plant.aquatic == True and plant.stagnant == True:
-                self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError("Can only add plants that require stagnant water to a swamp")
