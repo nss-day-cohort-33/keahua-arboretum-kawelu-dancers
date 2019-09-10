@@ -1,3 +1,4 @@
+import os
 from animals import RiverDolphin
 from animals import Kikakapu
 from animals import Gecko
@@ -8,6 +9,7 @@ from animals import Opeapea
 from animals import Spider
 
 def release_animal(arboretum):
+    os.system('cls' if os.name == 'nt' else 'clear')
     animal = None
 
     print("1. Gold Dust Day Gecko")
@@ -47,20 +49,48 @@ def release_animal(arboretum):
 
     habitat_list = []
 
+    try:
+        if animal.fresh:
+            habitat_list.extend(arboretum.rivers)
+    except AttributeError: 
+        pass
 
-    if animal.fresh:
-        habitat_list.extend(arboretum.rivers)
+    try:
+        if animal.stagnant:
+            habitat_list.extend(arboretum.swamps)
+    except AttributeError: 
+        pass
+    
+    try:
+        if animal.salty:
+            habitat_list.extend(arboretum.coastlines)
+    except AttributeError: 
+        pass
 
+    try:    
+        if animal.mountain_bound:
+            habitat_list.extend(arboretum.mountains)
+    except AttributeError:
+        pass
 
-    if animal.stagnant:
-        habitat_list.extend(arboretum.swamps)
-        
+    try:
+        if animal.grassland_bound:
+            habitat_list.extend(arboretum.grasslands)
+    except AttributeError:
+        pass
+
+    try:
+        if animal.forest_bound:
+            habitat_list.extend(arboretum.forests)
+    except AttributeError:
+        pass
+
 
 
     # for habitat_list:
 
     for index, habitats in enumerate(habitat_list):
-        print(f'{index + 1}. {habitats.type} {habitats.id}')
+        print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
 
 
 
@@ -69,6 +99,24 @@ def release_animal(arboretum):
     print("Release the animal into which biome?")
     choice = input("> ")
 
-    arboretum.rivers[int(choice) - 1].animals.append(animal)
+    if len(habitat_list[int(choice)-1].animals) < habitat_list[int(choice)-1].max_animals:
+        habitat_list[int(choice)-1].animals.append(animal)
+    else:
+            print("**** That Biome is not large enough **** \n **** Please choose another one ****")
+            for index, habitats in enumerate(habitat_list):
+                print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
+
+
+
+
+
+                print("Release the animal into which biome?")
+                choice = input("> ")
+
+
+    # for places in getattr(arboretum, habitat_list[int(choice) - 1].type):
+    #     if places.id == habitat_list[int(choice) - 1].id:
+    #         places.animals.append(animal)
+
 
 
