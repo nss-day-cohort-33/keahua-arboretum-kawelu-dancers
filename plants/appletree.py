@@ -1,6 +1,6 @@
 from .plant import Plant
 from interfaces.habitat import IMountain
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Apple_Tree(Plant, IMountain, Identifiable):
 

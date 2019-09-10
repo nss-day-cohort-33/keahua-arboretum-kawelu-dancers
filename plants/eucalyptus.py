@@ -1,6 +1,6 @@
 from .plant import Plant
 from interfaces.habitat import IForest
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Eucalyptus(Plant, IForest, Identifiable):
 
