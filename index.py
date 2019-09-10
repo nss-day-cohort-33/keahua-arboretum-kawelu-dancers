@@ -31,7 +31,7 @@ def main_menu():
         release_animal(keahua)
 
     if choice == "3":
-        pass
+        feed()
 
     if choice == "4":
         pass
