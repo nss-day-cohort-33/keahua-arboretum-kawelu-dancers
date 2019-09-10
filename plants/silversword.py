@@ -1,6 +1,6 @@
 from .plant import Plant
 from interfaces.habitat import IGrassland
-from interfaces import Identifiable
+from interfaces.identifiable import Identifiable
 
 class Silversword(Plant, IGrassland, Identifiable):
 
