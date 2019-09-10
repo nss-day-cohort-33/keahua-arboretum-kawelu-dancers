@@ -8,7 +8,7 @@ class RiverDolphin(Animal, IFreshwater, Identifiable):
         Animal.__init__(self, "River dolphin", age)
         IFreshwater.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Trout", "Mackarel", "Salmon", "Sardine" }
+        self.__prey = [ "Trout", "Mackarel", "Salmon", "Sardine" ]
 
     @property
     def prey(self):
