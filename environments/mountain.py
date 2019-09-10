@@ -10,6 +10,7 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
       IContainsAnimals.__init__(self)
       IContainsPlants.__init__(self)
       Identifiable.__init__(self)
+      self.type = "Mountain"
 
     def add_animal(self, animal):
         try:

@@ -1,4 +1,11 @@
 from animals import RiverDolphin
+from animals import Kikakapu
+from animals import Gecko
+from animals import Goose
+from animals import Pueo
+from animals import Ulae
+from animals import Opeapea
+from animals import Spider
 
 def release_animal(arboretum):
     animal = None
@@ -15,32 +22,49 @@ def release_animal(arboretum):
     choice = input("Choose animal to release > ")
 
     if choice == "1":
-        animal = Gecko()
+        animal = Gecko(12)
 
     if choice == "2":
-        animal = RiverDolphin()
+        animal = RiverDolphin(12)
 
     if choice == "3":
-        animal = Goose()
+        animal = Goose(12)
 
     if choice == "4":
-        animal = Kikakapu()
+        animal = Kikakapu(12)
 
     if choice == "5":
-        animal = Pueo()
+        animal = Pueo(12)
 
     if choice == "6":
-        animal = Ulae()
+        animal = Ulae(12)
 
     if choice == "7":
-        animal = Opeapea()
+        animal = Opeapea(12)
 
     if choice == "8":
-        animal = Spider()
+        animal = Spider(12)
+
+    habitat_list = []
 
 
-    for index, river in enumerate(arboretum.rivers):
-        print(f'{index + 1}. River {river.id}')
+    if animal.fresh:
+        habitat_list.extend(arboretum.rivers)
+
+
+    if animal.stagnant:
+        habitat_list.extend(arboretum.swamps)
+        
+
+
+    # for habitat_list:
+
+    for index, habitats in enumerate(habitat_list):
+        print(f'{index + 1}. {habitats.type} {habitats.id}')
+
+
+
+
 
     print("Release the animal into which biome?")
     choice = input("> ")

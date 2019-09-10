@@ -7,3 +7,4 @@ class Arboretum:
         self.mountains = []
         self.coastlines = []
         self.swamps = []
+        self.forests = []
