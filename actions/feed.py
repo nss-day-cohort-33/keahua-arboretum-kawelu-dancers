@@ -21,7 +21,7 @@ def feed_animal():
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
 
-    choice = input("Choose animal to feed > ")
+    choice = input("Choose animal to feed : ")
 
     if choice == "1":
         animal = Gecko(12)
@@ -62,4 +62,4 @@ def feed_animal():
     choice = input("> ")
 
     animal.feed(food_list[int(choice)-1])
-    choice = input("> ")
+    choice = input(": ")

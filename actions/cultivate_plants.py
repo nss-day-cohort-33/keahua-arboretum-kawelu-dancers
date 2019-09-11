@@ -13,7 +13,7 @@ def cultivate_plant(arboretum):
     print("3. Blue Jade Vine")
     print("4. Rainbow Eucalyptus Tree")
 
-    choice = input("Choose a plant to cultivate > ")
+    choice = input("Choose a plant to cultivate : ")
 
     if choice == "1":
         plant = Apple_Tree()
@@ -67,7 +67,7 @@ def cultivate_plant(arboretum):
         print(f'{index + 1}. {habitats.type} ({", ".join(plant_count) if len(habitats.plants) > 0 else "No plants here"})')
 
     print("Release the plant into which Habitat?")
-    choice = input("> ")
+    choice = input(": ")
 
     if len(habitat_list[int(choice)-1].plants) < habitat_list[int(choice)-1].max_plants:
         habitat_list[int(choice)-1].plants.append(plant)
@@ -81,7 +81,7 @@ def cultivate_plant(arboretum):
 
 
                 print("Release the plant into which Habitat?")
-                choice = input("> ")
+                choice = input(": ")
 
 
     # for places in getattr(arboretum, habitat_list[int(choice) - 1].type):

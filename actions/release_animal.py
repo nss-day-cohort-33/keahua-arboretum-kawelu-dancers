@@ -21,7 +21,7 @@ def release_animal(arboretum):
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
 
-    choice = input("Choose animal to release > ")
+    choice = input("Choose animal to release : ")
 
     if choice == "1":
         animal = Gecko(12)
@@ -105,4 +105,4 @@ def release_animal(arboretum):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
 
                 print("Release the animal into which Habitat?")
-                choice = input("> ")
+                choice = input(": ")

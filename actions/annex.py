@@ -15,7 +15,7 @@ def annex_habitat(arboretum):
     print("5. Mountain")
     print("6. Forest")
 
-    choice = input("Choose your habitat > ")
+    choice = input("Choose your habitat : ")
 
     if choice == "1":
         river = River()
