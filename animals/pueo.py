@@ -10,7 +10,7 @@ class Pueo(Animal, IGrassland, IForest, Identifiable):
         IForest.__init__(self)
         IGrassland.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Mice", "Hedgehog", "Possum", "Rodent" }
+        self.__prey = { "mouse", "hedgehog", "opossum", "rodent" }
 
     @property
     def prey(self):
@@ -18,9 +18,9 @@ class Pueo(Animal, IGrassland, IForest, Identifiable):
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The pueo ate {prey} for a meal')
+            print(f'The pueo ate a {prey} for a meal!')
         else:
-            print(f'The pueo rejects the {prey}')
+            print(f'The pueo rejects the {prey}.')
 
     def __str__(self):
         return f'Pueo {self.id}. Hoot Hoot!'

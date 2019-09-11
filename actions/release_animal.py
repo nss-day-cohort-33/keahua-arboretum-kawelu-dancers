@@ -21,7 +21,7 @@ def release_animal(arboretum):
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
 
-    choice = input("Choose animal to release > ")
+    choice = input("Choose animal to release : ")
 
     if choice == "1":
         animal = Gecko(12)
@@ -94,18 +94,18 @@ def release_animal(arboretum):
             for animals in set(species_list):
                 species_count.append(f"{str(species_list.count(animals))} {animals}")
             print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(habitats.animals) > 0 else "No animals here"})')
-        print("Release the animal into which biome?")
+        print("Release the animal into which habitat?")
     else:
-        print("There's no home for this animal!")
+        print("There's no habitat for this animal!")
 
     choice = input("> ")
 
     if len(habitat_list[int(choice)-1].animals) < habitat_list[int(choice)-1].max_animals:
         habitat_list[int(choice)-1].animals.append(animal)
     else:
-            print("**** That Biome is not large enough **** \n **** Please choose another one ****")
+            print("**** That Habitat is not large enough **** \n **** Please choose another one ****")
             for index, habitats in enumerate(habitat_list):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
 
-                print("Release the animal into which biome?")
-                choice = input("> ")
+                print("Release the animal into which Habitat?")
+                choice = input(": ")

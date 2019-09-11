@@ -10,7 +10,7 @@ class Kikakapu(Animal, IFreshwater, IStagnant, Identifiable):
         IFreshwater.__init__(self)
         IStagnant.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Algae", "Coral Polyps", "Worms", "Shrimp"}
+        self.__prey = { "algae", "coral polyp", "worm", "shrimp"}
 
     @property
     def prey(self):
@@ -18,9 +18,9 @@ class Kikakapu(Animal, IFreshwater, IStagnant, Identifiable):
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The kikakapu ate {prey} for a meal')
+            print(f'The kikakapu ate a {prey} for a meal!')
         else:
-            print(f'The kikakapu rejects the {prey}')
+            print(f'The kikakapu rejects the {prey}.')
 
     def __str__(self):
         return f'Kikakapu {self.id}.!'

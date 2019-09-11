@@ -8,7 +8,7 @@ class Spider(Animal, IStagnant, Identifiable):
         Animal.__init__(self, "Happy Face Spider", age)
         IStagnant.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Mosquitos", "Insects" }
+        self.__prey = { "mosquito", "un-identifiable insect" }
 
     @property
     def prey(self):
@@ -16,9 +16,9 @@ class Spider(Animal, IStagnant, Identifiable):
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The spider ate {prey} for a meal')
+            print(f'The spider ate a {prey} for a meal!')
         else:
-            print(f'The spider rejects the {prey}')
+            print(f'The spider rejects the {prey}.')
 
     def __str__(self):
         return f'Spider {self.id}. WWWWEeeeeeeee!'

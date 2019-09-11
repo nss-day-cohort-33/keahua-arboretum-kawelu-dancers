@@ -13,7 +13,7 @@ def cultivate_plant(arboretum):
     print("3. Blue Jade Vine")
     print("4. Rainbow Eucalyptus Tree")
 
-    choice = input("Choose a plant to cultivate > ")
+    choice = input("Choose a plant to cultivate : ")
 
     if choice == "1":
         plant = Apple_Tree()
@@ -68,16 +68,28 @@ def cultivate_plant(arboretum):
             print("Release the plant into which habitat?")
 
     else:
-        print("There is no biome for this plant!")
+        print("There is no habitat for this plant!")
 
-    choice = input("> ")
+    choice = input(": ")
 
     if len(habitat_list[int(choice)-1].plants) < habitat_list[int(choice)-1].max_plants:
         habitat_list[int(choice)-1].plants.append(plant)
     else:
-            print("**** That Biome is not large enough **** \n **** Please choose another one ****")
+            print("**** That Habitat is not large enough **** \n **** Please choose another one ****")
             for index, habitats in enumerate(habitat_list):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.plants)} plants)')
 
-                print("Release the plant into which biome?")
-                choice = input("> ")
+
+
+
+
+                print("Release the plant into which Habitat?")
+                choice = input(": ")
+
+
+    # for places in getattr(arboretum, habitat_list[int(choice) - 1].type):
+    #     if places.id == habitat_list[int(choice) - 1].id:
+    #         places.plants.append(plant)
+
+
+

@@ -34,7 +34,7 @@ def main_menu():
         release_animal(keahua)
 
     if choice == "3":
-        feed_animal(keahua)
+        feed_animal()
 
     if choice == "4":
         cultivate_plant(keahua)
