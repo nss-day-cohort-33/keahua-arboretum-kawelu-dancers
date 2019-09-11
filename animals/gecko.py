@@ -20,6 +20,5 @@ class Gecko(Animal, IForest, Identifiable):
         else:
             print(f'The Gold Dust Day Gecko rejects the {prey}.')
 
-
     def __str__(self):
         return f'Gold Dust Day Gecko {self.id}. tititititick!'

@@ -53,18 +53,22 @@ def cultivate_plant(arboretum):
     except AttributeError:
         pass
 
+    if len(habitat_list) > 0:
+        for index, habitats in enumerate(habitat_list):
+            plant_list = list()
+            plant_count = list()
 
-    for index, habitats in enumerate(habitat_list):
-        plant_list = list()
-        plant_count = list()
+            for species in habitats.plants:
+                plant_list.append(species.species)
 
-        for species in habitats.plants:
-            plant_list.append(species.species)
+            for plants in set(plant_list):
+                plant_count.append(f"{str(plant_list.count(plants))} {plants}")
 
-        for plants in set(plant_list):
-            plant_count.append(f"{str(plant_list.count(plants))} {plants}")
+            print(f'{index + 1}. {habitats.type} ({", ".join(plant_count) if len(habitats.plants) > 0 else "No plants here"})')
+            print("Release the plant into which habitat?")
 
-        print(f'{index + 1}. {habitats.type} ({", ".join(plant_count) if len(habitats.plants) > 0 else "No plants here"})')
+    else:
+        print("There is no biome for this plant!")
 
     print("Release the plant into which Habitat?")
     choice = input(": ")

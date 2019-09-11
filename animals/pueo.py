@@ -22,6 +22,5 @@ class Pueo(Animal, IGrassland, IForest, Identifiable):
         else:
             print(f'The pueo rejects the {prey}.')
 
-
     def __str__(self):
         return f'Pueo {self.id}. Hoot Hoot!'

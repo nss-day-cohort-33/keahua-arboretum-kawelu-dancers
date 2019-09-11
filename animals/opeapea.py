@@ -22,6 +22,5 @@ class Opeapea(Animal, IForest, IMountain, Identifiable):
         else:
             print(f'The ope\'ape\'a rejects the {prey}.')
 
-
     def __str__(self):
         return f'Opeapea {self.id}. SCREeeeeeechhhh!'
