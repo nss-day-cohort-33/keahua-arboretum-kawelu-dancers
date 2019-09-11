@@ -11,5 +11,5 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
       IContainsPlants.__init__(self)
       Identifiable.__init__(self)
       self.type = "mountains"
-      self.max_animals = 1
+      self.max_animals = 6
       self.max_plants = 4
