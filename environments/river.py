@@ -4,7 +4,6 @@ from interfaces.habitat import IContainsAnimals
 from interfaces.habitat import IContainsPlants
 from animals import RiverDolphin
 
-
 class River(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
@@ -14,4 +13,3 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
       self.type = "rivers"
       self.max_animals = 12
       self.max_plants = 6
-

@@ -85,16 +85,19 @@ def release_animal(arboretum):
     except AttributeError:
         pass
 
-    for index, habitats in enumerate(habitat_list):
-        species_count = list()
-        species_list = list()
-        for species in habitats.animals:
-            species_list.append(species.species)
-        for animals in set(species_list):
-            species_count.append(f"{str(species_list.count(animals))} {animals}")
-        print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(habitats.animals) > 0 else "No animals here"})')
+    if len(habitat_list) > 0:
+        for index, habitats in enumerate(habitat_list):
+            species_count = list()
+            species_list = list()
+            for species in habitats.animals:
+                species_list.append(species.species)
+            for animals in set(species_list):
+                species_count.append(f"{str(species_list.count(animals))} {animals}")
+            print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(habitats.animals) > 0 else "No animals here"})')
+        print("Release the animal into which biome?")
+    else:
+        print("There's no home for this animal!")
 
-    print("Release the animal into which biome?")
     choice = input("> ")
 
     if len(habitat_list[int(choice)-1].animals) < habitat_list[int(choice)-1].max_animals:
