@@ -94,15 +94,15 @@ def release_animal(arboretum):
             species_count.append(f"{str(species_list.count(animals))} {animals}")
         print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(habitats.animals) > 0 else "No animals here"})')
 
-    print("Release the animal into which biome?")
+    print("Release the animal into which Habitat?")
     choice = input("> ")
 
     if len(habitat_list[int(choice)-1].animals) < habitat_list[int(choice)-1].max_animals:
         habitat_list[int(choice)-1].animals.append(animal)
     else:
-            print("**** That Biome is not large enough **** \n **** Please choose another one ****")
+            print("**** That Habitat is not large enough **** \n **** Please choose another one ****")
             for index, habitats in enumerate(habitat_list):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
 
-                print("Release the animal into which biome?")
+                print("Release the animal into which Habitat?")
                 choice = input("> ")

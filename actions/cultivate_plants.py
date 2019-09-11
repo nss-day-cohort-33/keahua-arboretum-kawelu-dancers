@@ -66,13 +66,13 @@ def cultivate_plant(arboretum):
 
         print(f'{index + 1}. {habitats.type} ({", ".join(plant_count) if len(habitats.plants) > 0 else "No plants here"})')
 
-    print("Release the plant into which habitat?")
+    print("Release the plant into which Habitat?")
     choice = input("> ")
 
     if len(habitat_list[int(choice)-1].plants) < habitat_list[int(choice)-1].max_plants:
         habitat_list[int(choice)-1].plants.append(plant)
     else:
-            print("**** That Biome is not large enough **** \n **** Please choose another one ****")
+            print("**** That Habitat is not large enough **** \n **** Please choose another one ****")
             for index, habitats in enumerate(habitat_list):
                 print(f'{index + 1}. {habitats.type} ({len(habitats.plants)} plants)')
 
@@ -80,7 +80,7 @@ def cultivate_plant(arboretum):
 
 
 
-                print("Release the plant into which biome?")
+                print("Release the plant into which Habitat?")
                 choice = input("> ")
 
 

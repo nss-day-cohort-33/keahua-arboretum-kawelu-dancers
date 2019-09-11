@@ -8,7 +8,7 @@ class Ulae(Animal, ISaltwater, Identifiable):
         Animal.__init__(self, "Ulae", age)
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = { "Snail", "Lizard", "Guppie" }
+        self.__prey = { "snail", "lizard", "guppie" }
 
     @property
     def prey(self):
@@ -16,9 +16,9 @@ class Ulae(Animal, ISaltwater, Identifiable):
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The ulae ate {prey} for a meal')
+            print(f'The ulae ate a {prey} for a meal!')
         else:
-            print(f'The ulae rejects the {prey}')
+            print(f'The ulae rejects the {prey}.')
 
 
     def __str__(self):
