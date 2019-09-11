@@ -59,7 +59,7 @@ def feed_animal():
         print(f'{index + 1}. {food}')
 
     print("What do you want to feed it?")
-    choice = input("> ")
+    choice = input(": ")
 
     animal.feed(food_list[int(choice)-1])
     choice = input(": ")
