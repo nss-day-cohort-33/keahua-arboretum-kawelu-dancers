@@ -94,9 +94,9 @@ def release_animal(arboretum):
             for animals in set(species_list):
                 species_count.append(f"{str(species_list.count(animals))} {animals}")
             print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(habitats.animals) > 0 else "No animals here"})')
-        print("Release the animal into which Habitat?")
+        print("Release the animal into which habitat?")
     else:
-        print("There's no home for this animal!")
+        print("There's no habitat for this animal!")
 
     choice = input("> ")
 

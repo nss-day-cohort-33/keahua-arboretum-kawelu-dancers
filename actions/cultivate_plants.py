@@ -68,9 +68,8 @@ def cultivate_plant(arboretum):
             print("Release the plant into which habitat?")
 
     else:
-        print("There is no biome for this plant!")
+        print("There is no habitat for this plant!")
 
-    print("Release the plant into which Habitat?")
     choice = input(": ")
 
     if len(habitat_list[int(choice)-1].plants) < habitat_list[int(choice)-1].max_plants:
