@@ -28,8 +28,6 @@ def cultivate_plant(arboretum):
         plant = Eucalyptus()
 
     habitat_list = []
-    plant_list = list()
-    plant_count = list()
 
     try:
         if plant.stagnant:
@@ -55,14 +53,17 @@ def cultivate_plant(arboretum):
     except AttributeError:
         pass
 
-    for habitat in habitat_list:
-        for species in habitat.plants:
-            plant_list.append(species.species)
-
-    for plants in set(plant_list):
-        plant_count.append(f"{str(plant_list.count(plants))} {plants}")
 
     for index, habitats in enumerate(habitat_list):
+        plant_list = list()
+        plant_count = list()
+
+        for species in habitats.plants:
+            plant_list.append(species.species)
+
+        for plants in set(plant_list):
+            plant_count.append(f"{str(plant_list.count(plants))} {plants}")
+
         print(f'{index + 1}. {habitats.type} ({", ".join(plant_count) if len(habitats.plants) > 0 else "No plants here"})')
 
     print("Release the plant into which habitat?")
