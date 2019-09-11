@@ -20,6 +20,5 @@ class Spider(Animal, IStagnant, Identifiable):
         else:
             print(f'The spider rejects the {prey}')
 
-
     def __str__(self):
         return f'Spider {self.id}. WWWWEeeeeeeee!'

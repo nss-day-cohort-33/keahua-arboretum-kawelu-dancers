@@ -21,6 +21,5 @@ class RiverDolphin(Animal, IFreshwater, ISaltwater, Identifiable):
         else:
             print(f'The dolphin rejects the {prey}')
 
-
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'

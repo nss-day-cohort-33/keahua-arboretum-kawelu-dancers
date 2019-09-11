@@ -3,7 +3,6 @@ from interfaces.identifiable import Identifiable
 from interfaces.habitat import IContainsAnimals
 from interfaces.habitat import IContainsPlants
 
-
 class Forest(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
