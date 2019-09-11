@@ -48,6 +48,8 @@ def release_animal(arboretum):
         animal = Spider(12)
 
     habitat_list = []
+    species_list = list()
+    species_count = list()
 
     try:
         if animal.fresh:
@@ -85,10 +87,15 @@ def release_animal(arboretum):
     except AttributeError:
         pass
 
+    for habitat in habitat_list:
+        for species in habitat.animals:
+            species_list.append(species.species)
+
+    for animals in set(species_list):
+        species_count.append(f"{str(species_list.count(animals))} {animals}")
 
     for index, habitats in enumerate(habitat_list):
-        print(f'{index + 1}. {habitats.type} ({len(habitats.animals)} animals)')
-
+        print(f'{index + 1}. {habitats.type} ({", ".join(species_count) if len(species_count) > 0 else "No animals here"})')
 
     print("Release the animal into which biome?")
     choice = input("> ")
@@ -102,11 +109,3 @@ def release_animal(arboretum):
 
                 print("Release the animal into which biome?")
                 choice = input("> ")
-
-
-    # for places in getattr(arboretum, habitat_list[int(choice) - 1].type):
-    #     if places.id == habitat_list[int(choice) - 1].id:
-    #         places.animals.append(animal)
-
-
-
