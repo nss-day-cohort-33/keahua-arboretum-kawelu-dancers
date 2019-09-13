@@ -12,6 +12,10 @@ def feed_animal():
     os.system('cls' if os.name == 'nt' else 'clear')
     animal = None
 
+#When the user selects 3 from the main menu, this list appears.
+# Unlike our other action files, this one does NOT get the Keahua Arboretum passed into it.
+#That's becasue this action does not need to access any of the properties in the Arboretum class.
+
     print("1. Gold Dust Day Gecko")
     print("2. River Dolphin")
     print("3. Nene Goose")
@@ -47,6 +51,10 @@ def feed_animal():
     if choice == "8":
         animal = Spider(12)
 
+#When an animal is chosen to be fed, the program takes the prey that belong to the chosen animal class (via
+# the ".prey") method/function that exists on that specific animal and EXTENDS the "food_list" to include
+#the strings of food found insie that ".prey" function.
+
     food_list = list()
 
     try:
@@ -60,6 +68,9 @@ def feed_animal():
 
     print("What do you want to feed it?")
     choice = input(": ")
+
+#The "animal.feed" action goes into the imported file that belongs to the chosen animal
+# and accesses the function called "feed" so that this file will print "The {chosen animal} ate the {specified food} for a meal!"
 
     animal.feed(food_list[int(choice)-1])
     choice = input(": ")

@@ -21,6 +21,12 @@ def annex_habitat(arboretum):
         river = River()
         arboretum.rivers.append(river)
 
+#When the user hits "1" + "enter", Python adds an object with the class River() to
+# the arboretum's list of "self.rivers".
+#This file has access to our Keahua Arboretum object/class because
+# it was passed into this file from the index.py menu where the Keahua instance
+#of our Arboretum class was instantiated.
+
     if choice == "2":
         swamp = Swamp()
         arboretum.swamps.append(swamp)

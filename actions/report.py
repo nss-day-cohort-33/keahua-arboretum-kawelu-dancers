@@ -1,4 +1,11 @@
 def build_facility_report(arboretum):
+
+#This file is actually quite simple, it's purpose is to print to the console the IDs of each
+# object created in our Arboretum.
+#For every river, for example, in Arboretum's River list, print the word "River" and
+# print eight characters from the ID number that belongs to each individual river.
+#It does the same for all plants and animals within each of those habitats / Arboretum lists of objects.
+
     for river in arboretum.rivers:
         print(f'River [{str(river.id)[:8]}]')
         for animal in river.animals:
